@@ -7,8 +7,6 @@
   width: 100%;
   min-height: 100vh;
 
- 
-
   @media screen and (max-width: 900px) {
     flex-direction: column;
     padding: 3rem 1.5rem;
@@ -31,7 +29,7 @@
     color: #1a1a1a;
 
     span {
-      color: #7364E4; 
+      color: #7364E4;
     }
 
     @media screen and (max-width: 600px) {
@@ -97,6 +95,12 @@
       background-color: white;
       color: #8a2be2;
     }
+  }
+
+  /* ✨ FIX for Mobile Alignment ✨ */
+  @media screen and (max-width: 900px) {
+    margin-left: 0; 
+    align-items: center;
   }
 }
 

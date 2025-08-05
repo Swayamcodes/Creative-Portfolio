@@ -38,7 +38,7 @@ const Header = () => {
           </a>
         </div>
 
-        <a href="/Swayam-Resume.pdf" download className="cv-button">
+        <a href="/Swayam_Shinde.pdf" download className="cv-button">
           Download CV ⬇
         </a>
       </motion.div>
