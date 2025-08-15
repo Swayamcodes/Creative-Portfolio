@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
+  align-items: center; /* This is the key for vertical centering */
+  padding: 0.25rem 1.5rem; /* Reduced vertical size */
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -25,22 +25,29 @@
 
   @media screen and (max-width: 768px) {
     img {
-      width: 150px;
+      width: 100px;
     }
   }
 }
 
 .app__navbar-links {
-  flex: 1;
+  flex: 1 1 0%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* This ensures the links list is centered */
   list-style: none;
 
   li {
     margin: 0 1rem;
     cursor: pointer;
+    color: var(--gray-color);
+    font-size: 0.8rem;
+    text-align: left;
     flex-direction: column;
+    display: flex; /* Makes each list item a vertical flex container */
+    align-items: center;
+    justify-content: center;
+    /* Removed line-height: 1 as it can cause alignment issues */
 
     &:hover {
       color: var(--secondary-color);
@@ -51,16 +58,16 @@
       height: 5px;
       background: transparent;
       border-radius: 50%;
-      margin-bottom: 5px;
+      margin-bottom: 1px; /* Controlled gap below the dot */
     }
 
     a {
       color: var(--gray-color);
       text-decoration: none;
-      flex-direction: column;
       text-transform: uppercase;
       font-weight: 500;
       transition: all 0.3s ease-in-out;
+      margin-top: 0; /* Ensures no top margin is pushing it down */
 
       &:hover {
         color: var(--secondary-color);
@@ -78,8 +85,8 @@
 }
 
 .app__navbar-menu {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -113,8 +120,8 @@
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
     svg {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
     }

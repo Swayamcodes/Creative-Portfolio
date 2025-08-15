@@ -9,7 +9,7 @@ import './Navbar.scss';
 const Navbar = () => {
  const [toggle, setToggle] = useState(false)
 
- // ✨ FIX: This hook locks the background scroll when the mobile menu is open.
+ //  FIX: This hook locks the background scroll when the mobile menu is open.
  useEffect(() => {
    if (toggle) {
      document.body.style.overflow = 'hidden';
@@ -25,7 +25,7 @@ const Navbar = () => {
     </div>
     <ul className="app__navbar-links">
         {['home','about','skills','work','contact'].map((item) =>(
-            <li className="app__flex p-text" key={`link-${item}`}>
+            <li key={`link-${item}`}>
                 <div  />
                 <a href={`#${item}`}>{item}</a>
             </li>
